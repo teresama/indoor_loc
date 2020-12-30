@@ -2,18 +2,21 @@
 
 Configure your phone to detect in which room of a mapped space you are located. 
 
-The map corresponds to a campus building with a long corridor.
+The map corresponds to the corridor and rooms of an Electrical Engineering faculty building:
 
-![alt text](https://github.com/teresama/indoor_loc/blob/master/image.jpg?raw=true)
+<img src="https://github.com/teresama/indoor_loc/blob/master/images/image.jpg?raw=true" width="130">
 
-## Choose the android version
+## Choose the right android version
 
-Change the android version under "bayes_localization/MyApplication2/app" in file "build.gradle"
+Change the android version in [build.gradle](bayes_localization/MyApplication2/app/build.gradle) under. The current Android version used is 25.
 
 ## Data collection of your indoor map area
 
-It is necessary to generate a file "MyFileRawGaus.txt" with the SSID list of WiFi stations in the indoor area to be mapped.
-Check "map_file" directory to generate the same format of text file and once created needs to be added in the "Files/Downloads" of your Android device.
+The file [MyFileRawGaus.txt](map_file/MyFileRawGaus.txt) was generated after performing a scan of all the existing WiFi routers (with its associated SSID) that could be reached in all the areas to be mapped in the app.
+
+Consequently, it is required to generate a file with the SSID list of WiFi stations in the indoor area to be mapped.
+Check therefore the example file [MyFileRawGaus.txt](map_file/MyFileRawGaus.txt) to generate the same format of text file.
+Once created [MyFileRawGaus.txt](map_file/MyFileRawGaus.txt), it needs to be added in the "Files/Downloads" of your Android device since It is accessed in the app in here: [MainActivity.java](https://github.com/teresama/indoor_loc/blob/02684334bf182e2f329218ac7206efee3449f748/bayes_localization/MyApplication2/app/src/main/java/com/example/myapplication2/MainActivity.java#L110).
 
 ## Map of the area to get localized and working of app
 
@@ -21,4 +24,4 @@ By pressing the button FIND ME, the user is mapped onto the specific room that i
 
 An image of the GUI of indoor_loc app can be found below:
 
-![alt text](https://github.com/teresama/indoor_loc/blob/master/App2_Bayesian.jpeg?raw=true)
+<img src="https://github.com/teresama/indoor_loc/blob/master/images/App2_Bayesian.jpeg?raw=true" width="130">
